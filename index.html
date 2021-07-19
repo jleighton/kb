@@ -10245,8 +10245,8 @@ Error message and password prompt
 <div created="20210719134000638" modified="20210719134000638" title="$:/state/Link/-367311209/search">
 <pre>https://www.ebay.co.uk/itm/224337354116</pre>
 </div>
-<div created="20210719150302952" modified="20210719184302256" title="$:/state/notebook-sidebar">
-<pre>no</pre>
+<div created="20210719150302952" modified="20210719183937702" title="$:/state/notebook-sidebar">
+<pre>yes</pre>
 </div>
 <div created="20210719150304494" modified="20210719183939084" title="$:/state/notebook-sidebar-section">
 <pre>$:/core/ui/SideBar/Open</pre>
@@ -10805,15 +10805,95 @@ Solution: Choose a lower channel</pre>
 <div created="20210719110034344" modified="20210719110040034" tags="" title="This is a test">
 <pre>Test</pre>
 </div>
-<div created="20210719110438698" modified="20210719184344396" tags="$:/tags/SideBar" title="Welcome">
-<pre>This is my TiddlyWiki knowledge base.
-Everything that doesn't warrant a blog post will end up here.
-''Topics''
-* HomeAssistant
-* SteamLink
-
-''Snippets''
-[[Starting Flask App on Boot]]</pre>
+<div created="20210719110438698" modified="20210719191007048" tags="$:/tags/SideBar" title="Welcome">
+<pre>\define lingo-base() $:/language/TagManager/
+\define iconEditorTab(type)
+\whitespace trim
+&lt;$link to=&quot;&quot;&gt;&lt;&lt;lingo Icons/None&gt;&gt;&lt;/$link&gt;
+&lt;$list filter=&quot;[all[shadows+tiddlers]is[image]] [all[shadows+tiddlers]tag[$:/tags/Image]] -[type[application/pdf]] +[sort[title]] +[$type$is[system]]&quot;&gt;
+&lt;$link to={{!!title}}&gt;
+&lt;$transclude/&gt; &lt;$view field=&quot;title&quot;/&gt;
+&lt;/$link&gt;
+&lt;/$list&gt;
+\end
+\define iconEditor(title)
+\whitespace trim
+&lt;div class=&quot;tc-drop-down-wrapper&quot;&gt;
+&lt;$button popupTitle={{{ [[$:/state/popup/icon/]addsuffix&lt;__title__&gt;] }}} class=&quot;tc-btn-invisible tc-btn-dropdown&quot;&gt;{{$:/core/images/down-arrow}}&lt;/$button&gt;
+&lt;$reveal stateTitle={{{ [[$:/state/popup/icon/]addsuffix&lt;__title__&gt;] }}} type=&quot;popup&quot; position=&quot;belowleft&quot; text=&quot;&quot; default=&quot;&quot;&gt;
+&lt;div class=&quot;tc-drop-down&quot;&gt;
+&lt;$linkcatcher actions=&quot;&quot;&quot;&lt;$action-setfield $tiddler=&lt;&lt;__title__&gt;&gt; icon=&lt;&lt;navigateTo&gt;&gt;/&gt;&quot;&quot;&quot;&gt;
+&lt;&lt;iconEditorTab type:&quot;!&quot;&gt;&gt;
+&lt;hr/&gt;
+&lt;&lt;iconEditorTab type:&quot;&quot;&gt;&gt;
+&lt;/$linkcatcher&gt;
+&lt;/div&gt;
+&lt;/$reveal&gt;
+&lt;/div&gt;
+\end
+\define toggleButton(state)
+\whitespace trim
+&lt;$reveal stateTitle=&lt;&lt;__state__&gt;&gt; type=&quot;match&quot; text=&quot;closed&quot; default=&quot;closed&quot;&gt;
+&lt;$button setTitle=&lt;&lt;__state__&gt;&gt; setTo=&quot;open&quot; class=&quot;tc-btn-invisible tc-btn-dropdown&quot; selectedClass=&quot;tc-selected&quot;&gt;
+{{$:/core/images/info-button}}
+&lt;/$button&gt;
+&lt;/$reveal&gt;
+&lt;$reveal stateTitle=&lt;&lt;__state__&gt;&gt; type=&quot;match&quot; text=&quot;open&quot; default=&quot;closed&quot;&gt;
+&lt;$button setTitle=&lt;&lt;__state__&gt;&gt; setTo=&quot;closed&quot; class=&quot;tc-btn-invisible tc-btn-dropdown&quot; selectedClass=&quot;tc-selected&quot;&gt;
+{{$:/core/images/info-button}}
+&lt;/$button&gt;
+&lt;/$reveal&gt;
+\end
+\whitespace trim
+&lt;table class=&quot;tc-tag-manager-table&quot;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;&lt;lingo Colour/Heading&gt;&gt;&lt;/th&gt;
+&lt;th class=&quot;tc-tag-manager-tag&quot;&gt;&lt;&lt;lingo Tag/Heading&gt;&gt;&lt;/th&gt;
+&lt;th&gt;&lt;&lt;lingo Count/Heading&gt;&gt;&lt;/th&gt;
+&lt;th&gt;&lt;&lt;lingo Icon/Heading&gt;&gt;&lt;/th&gt;
+&lt;th&gt;&lt;&lt;lingo Info/Heading&gt;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;$list filter=&quot;[tags[]!is[system]sort[title]]&quot;&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;$edit-text field=&quot;color&quot; tag=&quot;input&quot; type=&quot;color&quot;/&gt;&lt;/td&gt;
+&lt;td&gt;{{||$:/core/ui/TagTemplate}}&lt;/td&gt;
+&lt;td&gt;&lt;$count filter=&quot;[all[current]tagging[]]&quot;/&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;$macrocall $name=&quot;iconEditor&quot; title={{!!title}}/&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;$macrocall $name=&quot;toggleButton&quot; state={{{ [[$:/state/tag-manager/]addsuffix&lt;currentTiddler&gt;] }}} /&gt; 
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td colspan=&quot;4&quot;&gt;
+&lt;$reveal stateTitle={{{ [[$:/state/tag-manager/]addsuffix&lt;currentTiddler&gt;] }}} type=&quot;match&quot; text=&quot;open&quot; default=&quot;&quot;&gt;
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;&lt;&lt;lingo Colour/Heading&gt;&gt;&lt;/td&gt;&lt;td&gt;&lt;$edit-text field=&quot;color&quot; tag=&quot;input&quot; type=&quot;text&quot; size=&quot;9&quot;/&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;&lt;lingo Icon/Heading&gt;&gt;&lt;/td&gt;&lt;td&gt;&lt;$edit-text field=&quot;icon&quot; tag=&quot;input&quot; size=&quot;45&quot;/&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/$reveal&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/$list&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td style=&quot;position:relative;&quot;&gt;
+{{$:/core/ui/UntaggedTemplate}}
+&lt;/td&gt;
+&lt;td&gt;
+&lt;small class=&quot;tc-menu-list-count&quot;&gt;&lt;$count filter=&quot;[untagged[]!is[system]] -[tags[]]&quot;/&gt;&lt;/small&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</pre>
 </div>
 <div created="20210719111855252" modified="20210719112158854" title="Zigbee Map">
 <pre># Publish payload: graphviz to 'zigbee2mqtt/bridge/request/networkmap'
