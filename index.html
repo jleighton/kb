@@ -145,6 +145,10 @@ Error message and password prompt
 
 <li>$:/config/DefaultSidebarTab</li>
 
+<li>$:/config/EditorToolbarButtons/Visibility/$:/core/ui/EditorToolbar/rotate-left</li>
+
+<li>$:/config/EditorToolbarButtons/Visibility/$:/core/ui/EditorToolbar/transcludify</li>
+
 <li>$:/config/Navigation/UpdateAddressBar</li>
 
 <li>$:/config/NewJournal/Tags</li>
@@ -162,6 +166,8 @@ Error message and password prompt
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/tag-manager</li>
 
 <li>$:/config/TextEditor/EditorHeight/Mode</li>
+
+<li>$:/config/Toolbar/ButtonClass</li>
 
 <li>$:/core</li>
 
@@ -192,6 +198,8 @@ Error message and password prompt
 <li>$:/state/add-plugin-info/$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.23/index.html/$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.23/index.html/$:/plugins/tiddlywiki/blog</li>
 
 <li>$:/state/add-plugin-info/$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.23/index.html/$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.23/index.html/$:/plugins/tiddlywiki/railroad</li>
+
+<li>$:/state/add-plugin-info/$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.23/index.html/$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.23/index.html/$:/plugins/tiddlywiki/xlsx-utils</li>
 
 <li>$:/state/add-plugin-info/$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.23/index.html/$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.23/index.html/$:/themes/tiddlywiki/readonly</li>
 
@@ -284,8 +292,14 @@ Error message and password prompt
 <div created="20210719105429043" modified="20210719105429347" title="$:/config/AnimationDuration">
 <pre>200</pre>
 </div>
-<div created="20210719150204042" modified="20210719150204042" title="$:/config/DefaultSidebarTab">
-<pre>Welcome</pre>
+<div created="20210719150204042" creator="James" modified="20210719191955669" modifier="James" title="$:/config/DefaultSidebarTab">
+<pre>$:/core/ui/SideBar/Open</pre>
+</div>
+<div created="20210719191929488" creator="James" modified="20210719191929488" modifier="James" title="$:/config/EditorToolbarButtons/Visibility/$:/core/ui/EditorToolbar/rotate-left">
+<pre>hide</pre>
+</div>
+<div created="20210719191922671" creator="James" modified="20210719191922671" modifier="James" title="$:/config/EditorToolbarButtons/Visibility/$:/core/ui/EditorToolbar/transcludify">
+<pre>hide</pre>
 </div>
 <div created="20210719133437368" modified="20210719133438412" title="$:/config/Navigation/UpdateAddressBar">
 <pre>permalink</pre>
@@ -313,6 +327,9 @@ Error message and password prompt
 </div>
 <div created="20210719111851704" modified="20210719111851704" title="$:/config/TextEditor/EditorHeight/Mode">
 <pre>fixed</pre>
+</div>
+<div created="20210719192002283" creator="James" modified="20210719192008548" modifier="James" title="$:/config/Toolbar/ButtonClass">
+<pre>tc-btn-boxed</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" name="Core" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.23">
 <pre>{
@@ -10178,8 +10195,8 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20210719110858051" creator="James" modified="20210719191354662" modifier="James" title="$:/DefaultTiddlers">
-<pre>[[Welcome]]</pre>
+<div created="20210719110858051" creator="James" modified="20210719191902593" modifier="James" title="$:/DefaultTiddlers">
+<pre>Welcome</pre>
 </div>
 <div created="20210719105627920" modified="20210719105630880" title="$:/GitHub/Filename">
 <pre>index.html</pre>
@@ -10202,11 +10219,11 @@ Error message and password prompt
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
-<div created="20210719110523898" modified="20210719133538135" title="$:/layout">
+<div created="20210719110523898" creator="James" modified="20210719191946125" modifier="James" title="$:/layout">
 <pre>$:/core/ui/PageTemplate</pre>
 </div>
-<div created="20210719110456416" creator="James" modified="20210719191419053" modifier="James" title="$:/palette">
-<pre>$:/palettes/GruvboxDark</pre>
+<div created="20210719110456416" creator="James" modified="20210719191851701" modifier="James" title="$:/palette">
+<pre>$:/themes/nico/notebook/palettes/palette-beige</pre>
 </div>
 <div author="NicolasPetton" bag="default" core-version="&gt;=5.1.22" dependents="" description="JavaScript hooks for mobile devices support of the Notebook theme" list="" name="Mobile support for the Notebook theme" plugin-type="plugin" revision="0" source="https://github.com/NicolasPetton/Notebook" title="$:/plugins/nico/notebook-mobile" type="application/json" version="1.0.0">
 <pre>{
@@ -10235,6 +10252,9 @@ Error message and password prompt
 <div created="20210719132712939" modified="20210719132712939" title="$:/state/add-plugin-info/$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.23/index.html/$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.23/index.html/$:/plugins/tiddlywiki/railroad">
 <pre>yes</pre>
 </div>
+<div created="20210719192101018" creator="James" modified="20210719192101018" modifier="James" title="$:/state/add-plugin-info/$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.23/index.html/$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.23/index.html/$:/plugins/tiddlywiki/xlsx-utils">
+<pre>yes</pre>
+</div>
 <div created="20210719132742095" modified="20210719132742095" title="$:/state/add-plugin-info/$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.23/index.html/$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.23/index.html/$:/themes/tiddlywiki/readonly">
 <pre>yes</pre>
 </div>
@@ -10247,32 +10267,32 @@ Error message and password prompt
 <div created="20210719134000638" modified="20210719134000638" title="$:/state/Link/-367311209/search">
 <pre>https://www.ebay.co.uk/itm/224337354116</pre>
 </div>
-<div created="20210719150302952" creator="James" modified="20210719191606137" modifier="James" title="$:/state/notebook-sidebar">
-<pre>no</pre>
+<div created="20210719150302952" creator="James" modified="20210719191834431" modifier="James" title="$:/state/notebook-sidebar">
+<pre>yes</pre>
 </div>
-<div created="20210719150304494" creator="James" modified="20210719191459200" modifier="James" title="$:/state/notebook-sidebar-section">
+<div created="20210719150304494" creator="James" modified="20210719191845904" modifier="James" title="$:/state/notebook-sidebar-section">
 <pre></pre>
 </div>
 <div created="20210719134043262" modified="20210719134043262" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20210719132726450" modified="20210719132825473" title="$:/state/tab--1418380610">
-<pre>$:/core/ui/ControlPanel/Plugins/Add/Updates</pre>
+<div created="20210719132726450" creator="James" modified="20210719192120691" modifier="James" title="$:/state/tab--1418380610">
+<pre>$:/core/ui/ControlPanel/Plugins/Add/Themes</pre>
 </div>
-<div created="20210719110449316" creator="James" modified="20210719191413878" modifier="James" title="$:/state/tab--1963855381">
-<pre>$:/core/ui/ControlPanel/Palette</pre>
+<div created="20210719110449316" creator="James" modified="20210719191946439" modifier="James" title="$:/state/tab--1963855381">
+<pre>$:/themes/nico/notebook/themetweaks</pre>
 </div>
 <div created="20210719105445859" modified="20210719110237593" title="$:/state/tab--2112689675">
 <pre>$:/core/ui/ControlPanel/Basics</pre>
 </div>
-<div created="20210719132732961" modified="20210719132732961" title="$:/state/tab--86143343">
-<pre>$:/core/ui/ControlPanel/Plugins/Installed/Themes</pre>
+<div created="20210719132732961" creator="James" modified="20210719192117507" modifier="James" title="$:/state/tab--86143343">
+<pre>$:/core/ui/ControlPanel/Plugins/Installed/Languages</pre>
 </div>
-<div created="20210719105450494" creator="James" modified="20210719191401140" modifier="James" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Appearance</pre>
+<div created="20210719105450494" creator="James" modified="20210719192130386" modifier="James" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/KeyboardShortcuts</pre>
 </div>
-<div created="20210719105501101" modified="20210719111143742" title="$:/state/tab-2065006209">
-<pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
+<div created="20210719105501101" creator="James" modified="20210719192014870" modifier="James" title="$:/state/tab-2065006209">
+<pre>$:/core/ui/ControlPanel/Saving/GitLab</pre>
 </div>
 <div created="20210719111334855" modified="20210719111335868" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Shadows</pre>
@@ -10280,7 +10300,7 @@ Error message and password prompt
 <div created="20210719105902510" modified="20210719145456304" title="$:/state/tab/sidebar--595412856">
 <pre>Welcome</pre>
 </div>
-<div created="20210719133453940" modified="20210719133457448" title="$:/state/tabs/controlpanel/toolbars-1345989671">
+<div created="20210719133453940" creator="James" modified="20210719191936103" modifier="James" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
@@ -10289,7 +10309,7 @@ Error message and password prompt
 <div created="20210719191341452" creator="J" modified="20210719191341867" modifier="Jame" title="$:/status/UserName">
 <pre>James</pre>
 </div>
-<div created="20210719191334492" creator="James" list="" modified="20210719191453069" modifier="James" title="$:/StoryList">
+<div created="20210719191334492" creator="James" list="" modified="20210719191848290" modifier="James" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210719110351212" creator="James" modified="20210719191410986" modifier="James" title="$:/theme">
